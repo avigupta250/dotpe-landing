@@ -1,16 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
-import Test from './components/Test'
+import Header from './components/Header'
 
 function App() {
   
 
   return (
-    <div className='p-4'>
-   <Test/>
+    <div className=' bg-[#191B41] h-[2000px]'>
+  
+    <Header/>
     </div>
   )
 }
