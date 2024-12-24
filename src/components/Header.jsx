@@ -59,7 +59,7 @@ function Header() {
         initial={{ y: -80 }}
         animate={{ y: isScrolled ? 0 : -80 }}
         transition={{ duration: 0.3 }}
-        className="w-full hidden md:block fixed h-[74px] px-10 bg-white  justify-between items-center shadow-md"
+        className="w-full hidden z-10 md:block fixed h-[74px] px-10 bg-white  justify-between items-center shadow-md"
       >
         <div className=" px-10 bg-white h-[74px]  flex justify-between items-center">
           <Logo />
@@ -73,7 +73,7 @@ function Header() {
       </motion.nav>
 
       {/* Mobile Navigation */}
-      <motion.nav className="w-full fixed top-0 md:hidden flex flex-col bg-white ">
+      <motion.nav className="w-full z-10 fixed top-0 md:hidden flex flex-col bg-white ">
         <div className="flex w-full px-6 py-4 justify-between items-center">
           <Logo />
           <button
@@ -91,7 +91,7 @@ function Header() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="overflow-hidden mb-4  "
+              className="overflow-hidden mb-  "
             >
               <motion.ul>
                 {Object.entries(courseData).map(([title, items]) => (
@@ -112,10 +112,10 @@ function Header() {
   );
 }
 
-function Logo() {
+export function Logo() {
   return (
     <div className="flex items-center gap-2">
-      <div className="w-7 relative h-7 rounded-[6px] justify-center bg-black">
+      <div className="w-7 relative h-7  rounded-[6px] justify-center bg-black">
         <div className="flex gap-2">
           <span className="top-2 left-1 absolute h-[6px] w-[6px] rounded-full bg-white"></span>
           <span className="top-2 left-[17px] absolute h-[6px] w-[6px] rounded-full bg-white"></span>
@@ -187,11 +187,11 @@ export const NavButton = () => {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="absolute  left-0 mt-2 w-80  bg-white shadow-lg rounded-lg border border-gray-200 "
+                className="absolute  left-0 mt-2 w-80 text-black  bg-white shadow-lg rounded-lg border border-gray-200 "
               >
                 {/* <span className="bg-black h-5 w-5  absolute translate-x-6   rotate-45"></span> */}
               
-                <div className="flex p-4  hover:bg-slate-100  rounded-lg flex-col">
+                <div className="flex p-4   hover:bg-slate-100  rounded-lg flex-col">
                   <div className="flex gap-4 group justify-start items-center">
                     <span>
                       <MdFastfood />
@@ -275,7 +275,7 @@ export const NavButton = () => {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="absolute left-0 mt-2 w-80  bg-white shadow-lg rounded-lg border border-gray-200"
+                className="absolute left-0 mt-2 w-80 text-black  bg-white shadow-lg rounded-lg border border-gray-200"
               >
                
                 <div className="flex p-4  hover:bg-slate-100  rounded-lg flex-col">
