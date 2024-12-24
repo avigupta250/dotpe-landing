@@ -4,6 +4,7 @@ import './App.css'
 
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
+import Services from './components/Services'
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
   
     <Header/>
     <HeroSection/>
+    <Services/>
     </div>
   )
 }

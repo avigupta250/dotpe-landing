@@ -18,12 +18,12 @@ const HeroSection = () => {
 
         {/* hero */}
         <motion.div className="flex mt-[96px]  flex-col justify-center items-center">
-          <h1 className="text-[95px] leading- md:text-[95px] mb-[16px] text-white text-center leading-[98px] flex justify-center md:font-bold">
+          <h1 className="text-[45px] leading-[50px] md:text-[95px] mb-[16px] text-white text-center md:leading-[98px] flex justify-center md:font-bold">
             Power your
             <br/> business with DotPe
           </h1>
           <div className="px-10 md: text-center">
-          <ul className="flex gap-3 flex-wrap text-[16px] justify-center  text-[#AD9AF0] mb-[8px]">
+          <ul className="flex gap-5  md:gap-3 flex-wrap text-[16px] justify-center  text-[#AD9AF0] mb-[8px]">
             <li>Point of Sale</li>
             <li>Online Store</li>
             <li>QR Solution</li>
