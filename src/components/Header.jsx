@@ -6,6 +6,7 @@ import { BiSolidShoppingBags } from "react-icons/bi";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import { SiOpenmediavault } from "react-icons/si";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -214,9 +215,9 @@ export const NavButton = () => {
                 <div className="flex p-4  hover:bg-slate-100  rounded-lg flex-col">
                   <div className="flex gap-4 group justify-start items-center">
                     <span>
-                      <MdFastfood />
+                    <BiSolidShoppingBags/>
                     </span>
-                    <h1>Food & Beverage Industry</h1>
+                    <h1>Retail</h1>
                  
                     <motion.span
                       initial={{ x: 0 }}
@@ -224,20 +225,20 @@ export const NavButton = () => {
                       transition={{ type: "spring", stiffness: 300 }}
                       className=" group-hover:translate-x-6"
                     >
-                      <FaArrowRight />
+                          <FaArrowRight />
+                      
                     </motion.span>
                   </div>
                   <p className="ml-9 text-[10px] text-gray-400">
-                    Tools for front of house, back of house, and everything in
-                    between.
+                    All the retail tools you need from offline to online, in-store & online
                   </p>
                 </div>
                 <div className="flex p-4  hover:bg-slate-100  rounded-lg flex-col">
                   <div className="flex gap-4 group justify-start items-center">
                     <span>
-                      <MdFastfood />
+                    <FaPeopleGroup/>
                     </span>
-                    <h1>Food & Beverage Industry</h1>
+                    <h1>Services & Others</h1>
                  
                     <motion.span
                       initial={{ x: 0 }}
@@ -249,8 +250,7 @@ export const NavButton = () => {
                     </motion.span>
                   </div>
                   <p className="ml-9 text-[10px] text-gray-400">
-                    Tools for front of house, back of house, and everything in
-                    between.
+                    Solutions for health, repair & other service professioanls
                   </p>
                 </div>
               </motion.div>
@@ -281,9 +281,9 @@ export const NavButton = () => {
                 <div className="flex p-4  hover:bg-slate-100  rounded-lg flex-col">
                   <div className="flex gap-4 group justify-start items-center">
                     <span>
-                      <MdFastfood />
+                   <SiOpenmediavault/>
                     </span>
-                    <h1>Food & Beverage Industry</h1>
+                    <h1>Press & Media</h1>
                  
                     <motion.span
                       initial={{ x: 0 }}
@@ -294,10 +294,10 @@ export const NavButton = () => {
                       <FaArrowRight />
                     </motion.span>
                   </div>
-                  <p className="ml-9 text-[10px] text-gray-400">
+                  {/* <p className="ml-9 text-[10px] text-gray-400">
                     Tools for front of house, back of house, and everything in
                     between.
-                  </p>
+                  </p> */}
                 </div>
               </motion.div>
             )}
