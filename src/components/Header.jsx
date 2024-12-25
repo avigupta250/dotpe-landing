@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion, useAnimation } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { FaBars, FaMinus } from "react-icons/fa6";
 import { MdFastfood } from "react-icons/md";
 import { BiSolidShoppingBags } from "react-icons/bi";
