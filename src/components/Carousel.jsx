@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Carousel from "./Carousel";
 
-const Testimonial = () => {
+const Carousel = () => {
   const sliderItems = [
     {
       name: "Aparna Andrews",
@@ -29,51 +28,62 @@ const Testimonial = () => {
     },
   ];
 
+  const sliderRef = useRef(null);
+
   const settings = {
-    // dots: true,
-    infinite: true, 
-    speed: 500, 
-    slidesToShow: 3, 
-    slidesToScroll: 1, 
-    // autoplay: true, 
-    autoplaySpeed: 2000, 
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    prevArrow: <></>, 
+    nextArrow: <></>,
   };
+
+  const handlePrev = () => {
+    sliderRef.current.slickPrev();
+  };
+
+  const handleNext = () => {
+    sliderRef.current.slickNext();
+  };
+
   return (
-    <div className="bg-black h-screen">
-      <div>
-        {/* heading */}
-        <div className="text-white text-center pt-12 text-[80px] font-bold">
-          Testimonial with our merchant
-        </div>
+    <div className="w-full mt-[100px] mx-auto p-4">
+      {/* Slider */}
+      <Slider {...settings} ref={sliderRef}>
+        {sliderItems.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white flex justify-center items-center"
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-[280px] h-[200px] object-fit  mx-auto"
+            />
+          </div>
+        ))}
+      </Slider>
 
-        {/* corousel */}
-        <div className="flex gap-6 w-full h-[500px]  web overflow-y-hidden">
-  <Carousel/>
-
-            {/* <Slider {...settings}>
-          {sliderItems.map((items, index) => (
-            <div className="flex bg-white justify-between max-w-full    max-h-[400px]  rounded-lg px-10 pt-10 gap-6 ">
-              <div className="flex flex-col ">
-                <h1>{items.name}</h1>
-                <h1>{items.about}</h1>
-                <p>{items.desc}</p>
-              </div>
-
-              <div className="flex justify-end w-[350px] h-full  ">
-                <img src={items.image}
-                className="  h-[300px]  object-cover"
-                />
-              </div>
-            </div>
-          ))}
-          </Slider> */}
-        </div>
-
-        {/* button */}
-        <div></div>
+      {/* Navigation Buttons */}
+      <div className="flex justify-center mt-6 gap-4">
+        <button
+          onClick={handlePrev}
+          className="bg-black text-white px-4 py-2 rounded"
+        >
+          Prev
+        </button>
+        <button
+          onClick={handleNext}
+          className="bg-black text-white px-4 py-2 rounded"
+        >
+          Next
+        </button>
       </div>
     </div>
   );
 };
 
-export default Testimonial;
+export default Carousel;
