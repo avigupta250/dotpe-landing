@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {motion} from "motion/react"
 const Ecosystem = () => {
   const services = [
     {
@@ -46,15 +46,22 @@ const Ecosystem = () => {
     <section className="w-full  bg-black text-white py-20">
       <div className="flex justify-center mx-auto items-center">
         <div className="flex   flex-col">
-          <h1 className="text-[50px] font-bold ml-[133px] max-w-[800px]">
+          <motion.h1
+          initial={{y:-30,opacity:0.6}}
+          whileInView={{y:0,opacity:1}}
+          transition={{duration:0.3,delay:0.9}}
+           className="text-[50px] font-bold ml-[133px] max-w-[800px]">
             Ecosystem to sell everything through DotPe
-          </h1>
+          </motion.h1>
 
           <div className="grid grid-cols-2  mt-10 gap-8">
             {/* Services List */}
             <div className="space-y-6 px-[120px] ">
               {services.map((service, index) => (
-                <div
+                <motion.div
+                initial={{x:-30,opacity:0}}
+                whileInView={{x:0,opacity:1}}
+                transition={{duration:0.3,delay:0}}
                   key={index}
                   onMouseEnter={() => {setServiceItem(service)
                     console.log(service)}
@@ -63,14 +70,14 @@ const Ecosystem = () => {
                   onMouseLeave={()=>{setServiceItem(services[0]) 
                     console.log(service)}}
                   className={`${serviceItem.title===service.title?`text-white`:`text-[#898787]`} text-black  cursor-pointer p-4 transition-all duration-300`}
-                //   className="p-4   cursor-pointer "
+              
                 >
                   <h1 className="text-3xl font-semibold">{service.title}</h1>
                   <p className="text-md leading-5 mt-4">{service.desc}</p>
                   <button className={`${serviceItem.title===service.title?`bg-blue-600 text-white`:`bg-[#2B2B2B] text-gray-200`}  px-4 py-2 mt-3 rounded-md`}>
                     Know More
                   </button>
-                </div>
+                </motion.div>
               ))}
             </div>
 
