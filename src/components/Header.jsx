@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { SiOpenmediavault } from "react-icons/si";
 
-function Header() {
+function Header({setOpenModal}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [toggle, setToggle] = useState(false);
 
@@ -66,7 +66,9 @@ function Header() {
           <div className="hidden md:flex gap-3 text-[18px] text-black">
             <NavButton />
           </div>
-          <button className="px-5 py-1 text-blue-600 border-2 rounded-full border-blue-600 text-[18px]">
+          <button 
+          onClick={()=>setOpenModal(true)}
+           className="px-5 py-1 text-blue-600 border-2 rounded-full border-blue-600 text-[18px]">
             Request Demo
           </button>
         </div>
