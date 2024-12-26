@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useRef } from "react";
+import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const Carousel = () => {
   const sliderItems = [
@@ -15,7 +15,7 @@ const Carousel = () => {
     {
       name: "Karthik Ranganathan",
       about: "Assistant VP, eCommerce, The ThickShake Factory",
-      desc: " Clarity of thought behind building the modules and having an answer to thr problems/use cases we brought up earned the brownie points in choosing DotPr POS",
+      desc: "Clarity of thought behind building the modules and having an answer to the problems/use cases we brought up earned the brownie points in choosing DotPr POS",
       image:
         "https://cdn.dotpe.in/dotpe-website-live/images/thick-shake-founder-image-160622.png",
     },
@@ -33,11 +33,14 @@ const Carousel = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 2000,
-    prevArrow: <></>, 
+    margin:200,
+    centerMode: true,
+    centerPadding: "200px", // Prevents any extra padding
+   
+    
+    prevArrow: <></>,
     nextArrow: <></>,
   };
 
@@ -56,19 +59,30 @@ const Carousel = () => {
         {sliderItems.map((item, index) => (
           <div
             key={index}
-            className="bg-white flex justify-center items-center"
+            className="bg-white h-[500px] w-[600px] flex justify-center items-center p-6 rounded-lg shadow-lg"
+            style={{ margin: "0 100px" }} // Add horizontal gap between slides
           >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-[280px] h-[200px] object-fit  mx-auto"
-            />
+            <div className="flex gap-6 items-center">
+              {/* Text Content */}
+              <div className="flex-1">
+                <h1 className="text-xl font-bold">{item.name}</h1>
+                <h2 className="text-sm text-gray-600">{item.about}</h2>
+                <p className="mt-4 text-sm text-gray-800">{item.desc}</p>
+              </div>
+
+              {/* Image */}
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-[200px] h-[200px] object-cover rounded-full"
+              />
+            </div>
           </div>
         ))}
       </Slider>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-center mt-6 gap-4">
+      <div className="flex justify-center mt-[60px] gap-4">
         <button
           onClick={handlePrev}
           className="bg-black text-white px-4 py-2 rounded"
