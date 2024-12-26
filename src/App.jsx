@@ -9,6 +9,7 @@ import Ecosystem from './components/Ecosystem'
 import ParallaxGallery from './components/ParallaxSection'
 import PartnerCount from './components/PartnerCount'
 import Testimonial from './components/Testimonial'
+import MerchantsLogo from './components/MerchantsLogo'
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
     <ParallaxGallery/>
     <PartnerCount/>
     <Testimonial/>
+    <MerchantsLogo/>
     <Services/>
     </div>
   )
