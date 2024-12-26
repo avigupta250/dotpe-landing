@@ -87,10 +87,10 @@ const MerchantsLogo = () => {
     },
   ];
   return (
-    <section className="w-full overflow-hidden flex justify-center items-center h-screen bg-white">
+    <section className="w-full overflow-hidden md:h-screen    bg-white">
       <div className="flex w-full gap-10 flex-col  justify-center items-center">
         <motion.h1
-        className="text-[30px] px-10 leading-[35px] md:text-[50px] md:px-[300px] md:leading-[65px] text-center font-bold"
+        className="text-[30px] mt-[80px] md:mt-[150px] px-10 leading-[35px] md:text-[50px] md:px-[300px] md:leading-[65px] text-center font-bold"
         >
           Empowering lacs of businesses, Enabling millions of transactions
         </motion.h1>
@@ -99,7 +99,7 @@ const MerchantsLogo = () => {
  initial={{scale:0.4}}
  whileInView={{scale:1}}
  transition={{duration:0.4}}
-className="w-full px-6 md:p-0"
+className="w-full px-6 mt-[40px] md:p-0"
 >
         <Swiper 
          slidesPerView={3}
@@ -128,7 +128,7 @@ className="w-full px-6 md:p-0"
           loop={true} 
           modules={[Autoplay]} 
        
-         className="mySwiper w-full px-10   md:w-[1150px]   overflow-hidden h-[400px]  flex justify-center items-center text-white"
+         className="mySwiper w-full px-10   md:w-[1150px]   overflow-hidden   flex justify-center items-center text-white"
        >
         
           {merchants.map((merchant, index) => (
@@ -138,7 +138,7 @@ className="w-full px-6 md:p-0"
             >
               <motion.img 
              
-              src={merchant.image} className="h-[200px] w-[300px] object-contain" />
+              src={merchant.image} className="h-[200p] w-[300px] object-contain" />
             </SwiperSlide>
           ))}
         </Swiper>
