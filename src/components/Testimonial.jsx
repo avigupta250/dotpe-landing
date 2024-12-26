@@ -79,11 +79,15 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black  min-h-screen">
       <div>
         {/* heading */}
         <div className="text-white mb-20  text-[30px] text-center pt-20 md:text-[60px] font-bold">
-          Moments with our Merchant
+          <motion.h1
+           initial={{opacity:0,y:-50}}
+           whileInView={{opacity:1,y:0}}
+           transition={{duration:0.5,delay:0.5}}
+          >Moments with our Merchant</motion.h1>
         </div>
 
         {/* corousel */}
@@ -147,14 +151,22 @@ const Testimonial = () => {
         </div>
 
         {/* button */}
-        <div className="flex gap-4 justify-center mt-10  pb-10">
-          <button className="prev-button  text-center flex justify-center items-center text-3xl bg-black border  border-gray-500 hover:border-gray-100 hover:text-gray-100 transition-all duration-300 text-gray-500 font-bold w-10 h-10  rounded-full">
+        <motion.div className="flex  w gap-4 justify-center mt-10  pb-10">
+          <motion.button
+          initial={{opacity:0,x: -30}}
+          whileInView={{opacity:1,x:0}}
+          transition={{duration:0.5,delay:0.5}}
+           className="prev-button  text-center flex justify-center items-center text-3xl bg-black border  border-gray-500 hover:border-gray-100 hover:text-gray-100 transition-all duration-300 text-gray-500 font-bold w-10 h-10  rounded-full">
            <IoIosArrowBack/>
-          </button>
-          <button className="next-button  text-center flex justify-center items-center text-3xl bg-black border  border-gray-500 hover:border-gray-100 hover:text-gray-100 transition-all duration-300 text-gray-500 font-bold w-10 h-10  rounded-full">
+          </motion.button>
+          <motion.button
+           initial={{opacity:0,x: 30}}
+           whileInView={{opacity:1,x:0}}
+           transition={{duration:0.6,delay:0.4}}
+           className="next-button  text-center flex justify-center items-center text-3xl bg-black border  border-gray-500 hover:border-gray-100 hover:text-gray-100 transition-all duration-300 text-gray-500 font-bold w-10 h-10  rounded-full">
             <IoIosArrowForward/>
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
     </div>
   );
