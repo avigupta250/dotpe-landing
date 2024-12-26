@@ -22,7 +22,7 @@ const PartnerCount = () => {
     ]
   ); // Black to Red
   return (
-    <div className="h-screen flex justify-center items-center text-center bg-blac  w-full">
+    <div className=" h-[330px] md:h-screen flex justify-center items-center text-center bg-blac  w-full">
       <div className="flex justify-center itms-center  flex-col ">
         <motion.span
           style={{ color: textColor }}
