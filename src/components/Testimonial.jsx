@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
+import {motion} from "motion/react"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoIosArrowBack ,IoIosArrowForward} from "react-icons/io";
 
@@ -109,14 +110,30 @@ const Testimonial = () => {
               <SwiperSlide className="bg-white rounded-3xl md:min-w-[720px] text-black">
                 <div className="w-full px-5  pt-10 md:px-12 md:pt-12 justify-between flex flex-col md:flex-row h-full">
                   <div className="md:w-1/2">
-                      <h1 className=" md:text-[40px] leading-4 text-[18px] md:leading-10 font-bold">{item.name}</h1>
-                      <h1 className="mt-[18px]  text-[15px] leading-4 md:leading-5 italic md:mt-[25px] font-bold md:text-[20px]">{item.about}</h1>
-                      <p className=" mt-[15px] leading-5 md:mt-[20px] md:leading-6 text-gray-900 italic text-[15px] ">{'"'}{item.desc}{'"'}</p>
+                      <motion.h1
+                       initial={{opacity:0,x:-50}}
+                       whileInView={{opacity:1,x:0}}
+                       transition={{duration:0.5,delay:0.5}}
+                       className=" md:text-[40px] leading-4 text-[18px] md:leading-10 font-bold">{item.name}</motion.h1>
+
+                      <motion.h1 
+                       initial={{opacity:0,x:-30}}
+                       whileInView={{opacity:1,x:0}}
+                       transition={{duration:0.5,delay:0.6}}
+                      className="mt-[18px]  text-[15px] leading-4 md:leading-5 italic md:mt-[25px] font-bold md:text-[20px]">{item.about}</motion.h1>
+                      <motion.p
+                      initial={{opacity:0,x:-30}}
+                      whileInView={{opacity:1,x:0}}
+                      transition={{duration:0.5,delay:0.8}}
+                       className=" mt-[15px] leading-5 md:mt-[20px] md:leading-6 text-gray-900 italic text-[15px] ">{'"'}{item.desc}{'"'}</motion.p>
                   </div>
 
                   <div className="">
 
-                    <img
+                    <motion.img
+                    initial={{opacity:0,y:60}}
+                    whileInView={{opacity:1,y:0}}
+                    transition={{duration:0.5,delay:0.9}}
                     src={item.image}
                     className="object-cover  w-full h-full"
                     />
