@@ -14,6 +14,7 @@ export const FormModal = ({ open, setOpenModal }) => {
   const onSubmit = (data) => {
     console.log("Form Data:", data);
     window.alert("Form Submitted ")
+    setOpenModal(false)
     // Perform further actions like API calls here
   };
 
