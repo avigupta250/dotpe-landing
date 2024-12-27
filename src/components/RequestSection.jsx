@@ -58,7 +58,7 @@ const RequestSection = ({setOpenModal}) => {
             <div className="border w-full md:w-[500px] mx-auto md:py-3 rounded-2xl">
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex w-full flex-col px-3 h-[50px] items-center"
+                className="flex w-full flex-col  h-[50px] items-center"
               >
                 <div className="flex w-full px-3 items-center justify-between">
                   <div className="flex py-3 flex-col items-center">
@@ -72,7 +72,7 @@ const RequestSection = ({setOpenModal}) => {
                           message: "Number must be at least 3 digits",
                         },
                       })}
-                      className={`w-[250px] focus:outline-none md:px-3 rounded ${
+                      className={`md:w-[250px] focus:outline-none md:px-3 rounded ${
                         errors.number ? "border border-red-500" : ""
                       }`}
                       placeholder="Enter your mobile number"
@@ -90,9 +90,11 @@ const RequestSection = ({setOpenModal}) => {
                     Request Rollback
                   </motion.button>
                 </div>
+
+
                 <motion.button
                   type="submit"
-                  className="bg-blue-600 mt-5 w-full md:hidden py-2 rounded-3xl text-white text-[20px]"
+                  className="bg-blue-600 mt-6 w-full md:hidden py-2 rounded-3xl text-white text-[20px]"
                 >
                   Request Rollback
                 </motion.button>
