@@ -59,7 +59,7 @@ function Header({setOpenModal}) {
         initial={{ y: -80 }}
         animate={{ y: isScrolled ? 0 : -80 }}
         transition={{ duration: 0.3 }}
-        className="w-full hidden z-10 md:block fixed h-[74px] px-10 bg-white  justify-between items-center shadow-md"
+        className="w-full hidden z-10 md:block fixed h-[74px] px-2 bg-white  justify-between items-center shadow-md"
       >
         <div className=" px-10 bg-white h-[74px]  flex justify-between items-center">
           <Logo />
