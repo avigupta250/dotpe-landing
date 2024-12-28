@@ -23,7 +23,7 @@ const ParallaxGallery = () => {
       
     
       const newScale = 3 - progress * 2;
-      const newScale2 = 2 - progress * 2;
+      const newScale2 = 2 - progress;
       const newOpacity=1.5-progress*2 
     setOpacity(newOpacity)
       setScale(newScale);
