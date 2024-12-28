@@ -111,7 +111,7 @@ const Testimonial = () => {
             className="mySwiper w-full overflow-hidden h-[570px] md:h-[400px]    flex justify-center items-center text-white"
           >
             {sliderItems.map((item, index) => (
-              <SwiperSlide className="bg-white rounded-3xl md:min-w-[720px] text-black">
+              <SwiperSlide key={index} className="bg-white rounded-3xl md:min-w-[720px] text-black">
                 <div className="w-full px-5  pt-10 md:px-12 md:pt-12 justify-between flex flex-col md:flex-row h-full">
                   <div className="md:w-1/2">
                       <motion.h1

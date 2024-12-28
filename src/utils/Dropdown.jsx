@@ -2,7 +2,7 @@ import React from 'react'
 import { AnimatePresence, motion } from "motion/react";
 import { FaBars, FaMinus } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa";
-const Dropdown = ({items,key,title,isOpen,onToggle}) => {
+const Dropdown = ({items,title,isOpen,onToggle}) => {
     // console.log(items[0].images)
   return (
     <div className='border-b-[1px] border-gray-500'>

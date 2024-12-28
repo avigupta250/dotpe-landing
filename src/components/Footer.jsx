@@ -5,7 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { TiArrowSortedDown } from "react-icons/ti";
 
 const Footer = () => {
-  const courseData = {
+  const types = {
     Business: ["Food & Beverages", "Retail", "Services"],
     DotPe: ["Home", "Press & Media"],
   };
@@ -71,8 +71,8 @@ const Footer = () => {
           whileInView="visible"
           className="md:hidden w-3/4 mx-auto py-16"
         >
-          {Object.entries(courseData).map(([title, items]) => (
-            <div className=" ">
+          {Object.entries(types).map(([title, items]) => (
+            
               <Dropdown
                 key={title}
                 title={title}
@@ -80,7 +80,7 @@ const Footer = () => {
                 isOpen={openSection === title}
                 onToggle={() => handleToggle(title)}
               />
-            </div>
+            
           ))}
         </motion.div>
 

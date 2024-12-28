@@ -46,6 +46,7 @@ const Ecosystem = () => {
     "Food & Beverages": [
       {
         // title: "Food & Beverage Industry",
+        id:1,
         desc: "Tools that connect the front of house with the back of house and integrate everything that you need to turn your restaurant into one dashboard",
         images: {
           image1:
@@ -63,6 +64,7 @@ const Ecosystem = () => {
       {
         // title: "Food & Beverage Industry",
         // title: "Retail",
+        id:2,
         desc: "Solutions to help you sell online and offline seamlessly.",
         images: {
           image1:
@@ -77,6 +79,7 @@ const Ecosystem = () => {
     "Services & Others": [
       {
         // title: "Services",
+        id:3,
         desc: "Efficient tools for health, repair, and other service professionals.",
         images: {
           image1:
@@ -123,7 +126,7 @@ const Ecosystem = () => {
           className="mt-10 md:hidden ">
             {Object.entries(servicesMob).map(([title, items]) => (
               <Dropdown
-                key={title}
+                key={items[0].id}
                 title={title}
                 items={items}
                 isOpen={openSections.includes(title)}
