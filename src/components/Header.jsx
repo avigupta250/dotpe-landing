@@ -133,7 +133,7 @@ function Dropdown({ title, items, isOpen, onToggle }) {
     <div>
       <button
         onClick={onToggle}
-        className="flex mt-3 justify-between items-center w-full"
+        className="flex mt-3 justify-between mb-3 items-center w-full"
       >
         <span className="px-6 font-gilroy font-bold text-lg ">{title}</span>
         <span className="px-3">{!isOpen ? <FaPlus /> : <FaMinus />}</span>
