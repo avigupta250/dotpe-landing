@@ -70,11 +70,7 @@ const MerchantsLogo = () => {
       image:
         "https://cdn.dotpe.in/dotpe-website-live/images/homepage-logo-design-image-4-150622.jpg",
     },
-    {
-      brand: "",
-      image:
-        "https://cdn.dotpe.in/dotpe-website-live/images/homepage-logo-design-image-4-150622.jpg",
-    },
+   
     {
       brand: "",
       image:
