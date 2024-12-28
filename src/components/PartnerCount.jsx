@@ -40,15 +40,15 @@ console.log(roundedScroll)
     // 322072
   );// Black to Red
   return (
-    <div className=" h-[330px]   overflow-hidden md:h-screen flex justify-center items-center text-center   w-full">
-      <div className="flex justify-center   itms-center  flex-col ">
+    <div className=" h-[330px]  overflow-hidden md:h-screen flex justify-center items-center text-center bg-blac  w-full">
+      <div className="flex justify-center itms-center  flex-col ">
         <motion.span
           style={{ color: textColor }}
-          className=" text-[80px] md:text-[230px] leading-[80px] md:leading-[230px]  font-bold "
+          className=" text-[90px] md:text-[230px] leading-[80px] md:leading-[230px]  font-bold "
         >
           75lacs+
         </motion.span>
-        <h1 className="text-black font-bold text-[20px] md:text-[68px]">Forward-thinking partner</h1>
+        <h1 className="text-black font-bold text-[25px] md:text-[68px]">Forward-thinking partner</h1>
       </div>
     </div>
   );
