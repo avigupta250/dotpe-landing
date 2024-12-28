@@ -27,13 +27,15 @@ export const FormModal = ({ open, setOpenModal }) => {
             animate={{ y: 0 }}
             exit={{ y: -1000, duration: -0.4, opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="fixed inset-0 flex items-center   justify-center z-50 bg-gray-800 bg-opacity-50"
+            onClick={()=>setOpenModal(false)}
+            className="fixed inset-0 flex items-center cursor-pointer  justify-center z-50 bg-gray-800 bg-opacity-50"
           >
             <motion.div
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="bg-white relative   mx-8 md:mx-[200px]  md:h-[95vh]  w-full flex flex-cols-1 md:flex-cols-2 rounded-2xl shadow-lg"
+              onClick={(e)=>e.stopPropagation()}
+              className="bg-white relative   mx-8 md:mx-[200px]   md:max-h-[95vh]  w-full flex flex-cols-1 md:flex-cols-2 rounded-2xl shadow-lg"
             >
               <button
                 onClick={() => setOpenModal(false)}
@@ -87,7 +89,7 @@ export const FormModal = ({ open, setOpenModal }) => {
                 >
                   {/* Name Input */}
                   <div className="flex flex-col w-full">
-                    {/* <label className="text-sm text-gray-600">Your Name</label> */}
+                    
                     <input
                       type="text"
                       {...register("name", { required: "Name is required" })}
@@ -103,9 +105,7 @@ export const FormModal = ({ open, setOpenModal }) => {
 
                   {/* Mobile Number Input */}
                   <div className="flex flex-col w-full">
-                    {/* <label className="text-sm text-gray-600">
-                      Mobile Number*
-                    </label> */}
+                   
                     <div className="flex items-center ">
                       <span className="text-gray-700 px-3 py-3 md:py-4 border border-gray-300 rounded-l-xl">
                         +91
@@ -132,9 +132,7 @@ export const FormModal = ({ open, setOpenModal }) => {
 
                   {/* Email Input */}
                   <div className="flex flex-col w-full">
-                    {/* <label className="text-sm text-gray-600">
-                      Email Address
-                    </label> */}
+                    
                     <input
                       type="email"
                       {...register("email", {
@@ -164,7 +162,6 @@ export const FormModal = ({ open, setOpenModal }) => {
                     information.
                   </div>
 
-                  {/* Submit Button */}
                 </form>
 
                 <motion.div className="flex justify-center  mt-24 md:mt-16  md:justify-end w-full">
