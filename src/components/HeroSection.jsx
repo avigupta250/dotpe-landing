@@ -4,7 +4,7 @@ import { Logo, NavButton } from "../components/Header";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#101544] md:h-[1300px] min-h-screen">
+    <section className="bg-[#201139] overflow-hidden ">
       <div>
         <div className=" px-10 text-white  h-[74px]  flex justify-between items-center">
           <Logo />
@@ -17,13 +17,13 @@ const HeroSection = () => {
         </div>
 
         {/* hero */}
-        <motion.div className="flex mt-[96px]  flex-col justify-center items-center">
-          <h1 className="text-[45px] leading-[50px] md:text-[95px] mb-[16px] text-white text-center md:leading-[98px] flex justify-center md:font-bold">
+        <motion.div className="flex mt-[30px] md:mt-[66px]  flex-col justify-center items-center">
+          <h1 className="text-[45px] font-gilroy font-bold leading-[50px] md:text-[95px] mb-[16px] text-white text-center md:leading-[98px] flex justify-center md:font-bold">
             Power your
             <br/> business with DotPe
           </h1>
-          <div className="px-10 md: text-center">
-          <ul className="flex gap-5  md:gap-3 flex-wrap text-[16px] justify-center  text-[#AD9AF0] mb-[8px]">
+          <div className="px-[130p] md:px-[10px]  md:w-[600px] overflow-hidden py-3  mt-6 md: text-center">
+          <ul className="flex gap-6  md:gap-3 font-gilroy font-bold flex-wrap text-[16px] justify-center leading-[1px]  md:leading-[12px] text-[#7e74b5] mb-[8px]">
             <li>Point of Sale</li>
             <li>Online Store</li>
             <li>QR Solution</li>
@@ -36,21 +36,33 @@ const HeroSection = () => {
           <motion.button className="w-[160px] h-[60px]  text-white font-semibold mt-8 text-[20px] rounded-full bg-blue-600">Get Started</motion.button>
         </motion.div>
 
+
+        {/* mobile */}
+        <div className="flex md:hidden h-[300px] items-center  gap-5 mt-10 overflow-hidden">
+        <img  className="object-cover w-[30vw] h-[200px]   rounded-r-2xl" src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-1-240622.jpg"/>
+        <img className="object-cover w-[30vw] -translate--[80px]   rounded-2xl" src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-2-240622.jpg"/>
+        <img className="object-cover w-[40vw]  h-[200px] rounded-2xl " src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-3-240622.jpg"/>
+        
+
+          </div>
+
 {/* image section */}
-        <div className="mt-[100px] h-[790px] items-center gap-10 flex overflow-hidden">
-            <div className="w-[560px]   h-[590px]">
-                <img  className="object-cover rounded-3xl" src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-1-240622.jpg"/>
+<div className="hidden md:block">
+        <div className="mt-[100px]   md:h-[790px] items-center gap-4 md:gap-10 flex overflow-hidden">
+            <div className="  md:w-[560px] md:h-[590px]">
+                <img  className="object-cover  md:rounded-3xl" src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-1-240622.jpg"/>
             </div>
-            <div className="w-[260px] mt-[60px] h-[360px]">
-                <img className="object-cover rounded-3xl" src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-2-240622.jpg"/>
+            <div className="       md:w-[300px] mt-[60px] md:h-[360px]">
+                <img className="object-cover   md:rounded-3xl" src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-2-240622.jpg"/>
             </div>
-            <div className="w-[360px] -z-1  -translate-y-[180px] h-[410px]">
-                <img className="object-cover rounded-3xl " src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-3-240622.jpg"/>
+            <div className="         md:w-[360px] -z-1   md:-translate-y-[180px] md:h-[410px]">
+                <img className="object-cover md:rounded-3xl " src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-3-240622.jpg"/>
             </div>
-            <div className="w-[490px] hidden lg:block h-[490px]">
+            <div className="md:w-[490px] hidden lg:block md:h-[490px]">
                 <img className="object-cover rounded-3xl" src="https://cdn.dotpe.in/dotpe-website-live/images/new-hero-section-image-4-240622.jpg"/>
             </div>
            
+        </div>
         </div>
       </div>
     </section>
