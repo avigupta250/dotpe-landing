@@ -5,7 +5,7 @@ import { FaPlus } from "react-icons/fa";
 const Dropdown = ({items,key,title,isOpen,onToggle}) => {
     // console.log(items[0].images)
   return (
-    <div className='border-b-[1px] border-slate-700'>
+    <div className='border-b-[1px] border-gray-500'>
     <button
       onClick={onToggle}
       className="flex mt-3 justify-between mb-3  items-center w-full"
