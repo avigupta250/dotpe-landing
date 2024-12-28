@@ -25,7 +25,7 @@ const RequestSection = ({ setOpenModal }) => {
     exit: { y: -1000, opacity: 0 },
   };
   return (
-    <section className="relative w-full ">
+    <section className="relative w-full font- ">
       {/* Form Section */}
       <div className="w-full flex items-center justify-center">
         <div className="flex w-full md:mb-[100px] mt-[80px] md:mt-0 max-w-[1080px] px-3 flex-col items-center justify-center">
@@ -33,7 +33,7 @@ const RequestSection = ({ setOpenModal }) => {
             initial={{ y: -30 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-black text-[32px] md:px-[200px] leading-[30px] md:text-[56px] font-bold md:leading-[60px] text-center"
+            className="text-black text-[32px] md:px-[200px] leading-[35px] md:text-[56px] font-bold md:leading-[60px] text-center"
           >
             Build and grow your business with DotPe.
           </motion.h1>
