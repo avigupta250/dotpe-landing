@@ -12,6 +12,7 @@ import MerchantsLogo from "./components/MerchantsLogo";
 import RequestSection from "./components/RequestSection";
 
 import { FormModal } from "./components/FormModal";
+import Footer from "./components/Footer";
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
@@ -30,7 +31,7 @@ function App() {
         <Testimonial />
         <MerchantsLogo />
         <RequestSection setOpenModal={setOpenModal} />
-        <Services />
+        <Footer/>
       </div>
     </div>
   );
