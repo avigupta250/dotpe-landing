@@ -1,7 +1,4 @@
-// import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "motion/react";
-// import {motion} from "motion/react"
-import { MotionConfig } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 const ParallaxGallery = () => {
@@ -10,12 +7,9 @@ const ParallaxGallery = () => {
   const [scale2,setScale2]=useState(1)
   const [opacity,setOpacity]=useState(0)
   const {scrollYProgress}=useScroll();
-//   const scroll=useScroll();
-//   console.log(scroll)
 
 
-  const textColor = useTransform(scrollYProgress, [0, 1], ["#000000", "#FF0000"]);
-  useEffect(() => {
+ useEffect(() => {
     const handleScroll = () => {
       const container = containerRef.current;
       if (!container) return;
@@ -102,43 +96,3 @@ export default ParallaxGallery;
 
 
 
-
-
-
-// export const ParallaxGalary = () => {
-//   const containerRef = useRef(null);
-
-//   // Detect scroll progress
-//   const { scrollYProgress } = useScroll({
-//     target: containerRef,
-//     offset: ["start start", "end end"],
-//   });
-
-//   // Create smooth zoom effect
-//   const springConfig = { damping: 20, stiffness: 80 };
-//   const smoothProgress = useSpring(scrollYProgress, springConfig);
-
-//   // Transform scale based on scroll
-//   const scale = useTransform(smoothProgress, [0, 0.5 ,1], [1.2,0.8, 0.6]);
-
-//   return (
-//     <div ref={containerRef} className="min-h-[200vh] ">
-//       <div className="sticky top-0 h-screen overflow-hidden">
-//         <motion.div
-//           className="w-full h-full"
-//           style={{
-//             scale,
-//           }}
-//         >
-//           <img
-//             src="https://cdn.dotpe.in/dotpe-website-live/images/Scroll-Images-01.webp"
-//             alt="Zoom Effect"
-//             className="w-full h-screen object-cover"
-//           />
-//         </motion.div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ScrollZoomImage;
