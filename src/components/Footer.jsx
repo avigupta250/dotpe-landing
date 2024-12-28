@@ -226,12 +226,12 @@ const Dropdown = ({ title, items, isOpen, onToggle }) => {
           onClick={onToggle}
           className=" flex items-center gap-2  cursor-pointer"
         >
-          <span className="font-medium text-white">{title}</span>
+          <span className="font-extrabold font-gilroy text-gray-300">{title}</span>
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >
-            <TiArrowSortedDown className="h-5 w-5 text-gray-500 mt-1" />
+            <TiArrowSortedDown className="h-5 w-5 text-gray-00 mt-1" />
           </motion.div>
         </motion.div>
       </div>
@@ -253,7 +253,7 @@ const Dropdown = ({ title, items, isOpen, onToggle }) => {
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
-                    className="text-gray-600 hover:text-gray-900"
+                    className="text- font-gilroy font-bold "
                   >
                     {item}
                   </motion.li>
