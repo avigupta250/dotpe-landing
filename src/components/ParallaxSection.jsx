@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 const ParallaxGallery = () => {
   const containerRef = useRef(null);
   const [scale, setScale] = useState(3); 
-  const [scale2,setScale2]=useState(1)
+  const [scale2,setScale2]=useState()
   const [opacity,setOpacity]=useState(0)
   const {scrollYProgress}=useScroll();
 
@@ -23,7 +23,7 @@ const ParallaxGallery = () => {
       
     
       const newScale = 3 - progress * 2;
-      const newScale2 = 2 - progress;
+      const newScale2 = 2 - progress/1.1;
       const newOpacity=1.5-progress*2 
     setOpacity(newOpacity)
       setScale(newScale);
