@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "motion/react";
 
-const RequestSection = ({setOpenModal}) => {
+const RequestSection = ({ setOpenModal }) => {
   const {
     register,
     handleSubmit,
@@ -25,8 +25,7 @@ const RequestSection = ({setOpenModal}) => {
     exit: { y: -1000, opacity: 0 },
   };
   return (
-    <section className="relative w-full">
-      
+    <section className="relative w-full ">
       {/* Form Section */}
       <div className="w-full flex items-center justify-center">
         <div className="flex w-full md:mb-[100px] mt-[80px] md:mt-0 max-w-[1080px] px-3 flex-col items-center justify-center">
@@ -64,7 +63,7 @@ const RequestSection = ({setOpenModal}) => {
                   <div className="flex py-3 flex-col items-center">
                     <input
                       id="number"
-                      type="number"
+                      type="text"
                       {...register("number", {
                         required: "Number is required",
                         minLength: {
@@ -72,16 +71,10 @@ const RequestSection = ({setOpenModal}) => {
                           message: "Number must be at least 3 digits",
                         },
                       })}
-                      className={`md:w-[250px] focus:outline-none md:px-3 rounded ${
-                        errors.number ? "border border-red-500" : ""
-                      }`}
+                      className={`w-[250px] focus:ring-0 focus:outline-none bg-none md:px-3 rounded `}
                       placeholder="Enter your mobile number"
                     />
-                    {errors.number && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.number.message}
-                      </p>
-                    )}
+                    
                   </div>
                   <motion.button
                     type="submit"
@@ -89,19 +82,30 @@ const RequestSection = ({setOpenModal}) => {
                   >
                     Request Rollback
                   </motion.button>
+                  {errors.number && (
+                      <span className="text-red-500 text-xs ">
+                        {errors.number.message}
+                      </span>
+                    )}
                 </div>
-
-
-                <motion.button
-                  type="submit"
-                  className="bg-blue-600 mt-6 w-full md:hidden py-2 rounded-3xl text-white text-[20px]"
-                >
-                  Request Rollback
-                </motion.button>
+                
               </form>
+              
             </div>
           </motion.div>
         </div>
+      </div>
+      <div className="px-3 ">
+        <motion.button
+          initial={{ y: 30 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          type="submit"
+          onClick={handleSubmit(onSubmit)}
+          className="bg-blue-600 mt-6 w-full  md:hidden py-4 rounded-full text-white text-[20px]"
+        >
+          Request Rollback
+        </motion.button>
       </div>
     </section>
   );
