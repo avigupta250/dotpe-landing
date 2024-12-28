@@ -41,16 +41,20 @@ const Services = () => {
     },
   ];
   return (
-    <section className="mt-[100px] mb-[100px]">
+    <section className="mt-[50px] px-3 md:mt-[100px mb-[80px] md:mb-[200px]">
       <motion.div className="flex max-w-[1080px] mx-auto flex-col items-center justify-center">
-        <h1 className="text-black text-[34px] leading-[30px]  md:text-[56px] font-bold md:leading-[55px] text-center">
+        <motion.h1
+        initial={{opacity:0,y: 80}}
+        whileInView={{opacity:1,y:0}}
+        transition={{duration:0.5,delay:0.4}}
+         className="text-black text-[34px] leading-[30px]  md:text-[56px] font-bold md:leading-[55px] text-center">
           Flexible 
-         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#704DA2] via-[#4A2D85] to-[#341A74]"> business solutions for</span>
+         <span className="text-transparent italic bg-clip-text bg-gradient-to-r from-[#704DA2] via-[#4A2D85] to-[#341A74]"> business solutions for</span>
           <br />
           omni-channel selling
-        </h1>
+        </motion.h1>
 
-        <div className="grid px-7 grid-cols-1 mt-10 gap-16 md:grid-cols-2">
+        <div className="grid px-7 grid-cols-1 mt-20 gap-16 md:grid-cols-2">
           {cardData.map((item, index) => (
             <motion.div 
             initial={{opacity:0,y: 80}}
