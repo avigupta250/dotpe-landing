@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { IoArrowForward } from "react-icons/io5";
 import Dropdown from "../utils/Dropdown";
 const Ecosystem = () => {
@@ -91,10 +91,14 @@ const Ecosystem = () => {
   };
 
   const [serviceItem, setServiceItem] = useState(services[0]);
+  const [openSections, setOpenSections] = useState([]);
 
-  const [openSection, setOpenSection] = useState(null);
   const handleToggle = (title) => {
-    setOpenSection(openSection === title ? null : title);
+    setOpenSections((prevOpenSections) =>
+      prevOpenSections.includes(title)
+        ? prevOpenSections.filter((section) => section !== title)
+        : [...prevOpenSections, title]
+    );
   };
 
   return (
@@ -104,24 +108,29 @@ const Ecosystem = () => {
           <motion.h1
             initial={{ y: -30, opacity: 0.6 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.9 }}
-            className="md:text-[50px] font-bold md:ml-[133px] text-[30px]  px-6 md:px-0 max-w-[800px]"
+            transition={{ duration: 0.3, delay: 0.3 }}
+            className="md:text-[50px] font-gilroy  font-bold md:ml-[133px] text-[30px] leading-[35px] md:leading-[60px] px-6 md:px-0 max-w-[800px]"
           >
             Ecosystem to sell everything through DotPe
           </motion.h1>
 
           {/* mobile view */}
-          <div className="mt-10 md:hidden ">
+          <motion.div
+           initial={{ y: 30, opacity: 0.6 }}
+           whileInView={{ y: 0, opacity: 1 }}
+           transition={{ duration: 0.3, delay: 0.3 }}
+          
+          className="mt-10 md:hidden ">
             {Object.entries(servicesMob).map(([title, items]) => (
               <Dropdown
                 key={title}
                 title={title}
                 items={items}
-                isOpen={openSection === title}
+                isOpen={openSections.includes(title)}
                 onToggle={() => handleToggle(title)}
               />
             ))}
-          </div>
+          </motion.div>
           {/* Desktop bview */}
           <div className="hidden md:block">
             <div className="grid grid-cols-2  mt-10 gap-8">
@@ -165,33 +174,42 @@ const Ecosystem = () => {
               </div>
 
               {/* Image List */}
-              <div>
-                <div className="flex flex-col  space-y-4 transition-opacity duration-300">
-                  <div className="overflow-hidden">
-                    <img
-                      src={serviceItem.images["image1"]}
-                      alt="Service Image 1"
-                      className="w-full h-[370px] object-cover  rounded-3xl transition-transform duration-300 transform "
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 space-x-4">
+              <AnimatePresence>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  onChange={{opacity:0}}
+                 
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.9 }}
+                >
+                  <div className="flex flex-col  space-y-4 transition-opacity duration-300">
                     <div className="overflow-hidden">
                       <img
-                        src={serviceItem.images["image2"]}
-                        alt="Service Image 2"
-                        className="w-full object-cover rounded-3xl h-[250px] transition-transform duration-300 transform hover:scale-105"
+                        src={serviceItem.images["image1"]}
+                        alt="Service Image 1"
+                        className="w-full h-[370px] object-cover  rounded-3xl transition-transform duration-300 transform "
                       />
                     </div>
-                    <div className="overflow-hidden">
-                      <img
-                        src={serviceItem.images["image3"]}
-                        alt="Service Image 3"
-                        className="w-full object-cover h-[250px] h-auo rounded-3xl transition-transform duration-300 transform hover:scale-105"
-                      />
+
+                    <div className="grid grid-cols-2 space-x-4">
+                      <div className="overflow-hidden">
+                        <img
+                          src={serviceItem.images["image2"]}
+                          alt="Service Image 2"
+                          className="w-full object-cover rounded-3xl h-[250px] transition-transform duration-300 transform hover:scale-105"
+                        />
+                      </div>
+                      <div className="overflow-hidden">
+                        <img
+                          src={serviceItem.images["image3"]}
+                          alt="Service Image 3"
+                          className="w-full object-cover h-[250px] h-auo rounded-3xl transition-transform duration-300 transform hover:scale-105"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>
