@@ -28,7 +28,7 @@ const Footer = () => {
     setOpenSection(openSection === title ? null : title);
   };
   return (
-    <section className="w-full bg-black mt-[50px]">
+    <section className="w-full bg-black mt-[100px] ">
       <div className=" text-white  ">
         {/* desktop view */}
         <div className="hidden md:block">
