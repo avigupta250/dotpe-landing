@@ -4,7 +4,7 @@ import { Logo, NavButton } from "../components/Header";
 
 const HeroSection = ({setOpenModal}) => {
   return (
-    <section className="bg-[#201139] overflow-hidden ">
+    <section className=" bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-[#3B275E] via-[#191B41] to-[#171A3F] overflow-hidden ">
       <div>
         <div className=" px-10 text-white  h-[74px]  flex justify-between items-center">
           <Logo />
