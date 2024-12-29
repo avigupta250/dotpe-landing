@@ -7,7 +7,8 @@ const HeroSection = ({setOpenModal}) => {
     <section className=" bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-[#533c7b] via-[#181a45] to-[#171A3F] overflow-hidden ">
       <div>
         <div className=" px-10 text-white  h-[74px]  flex justify-between items-center">
-          <Logo />
+          {/* <Logo /> */}
+          <img src="https://cdn.dotpe.in/dotpe-website-live/images/dotpe-black-logo-svg.svg" alt="logo"/>
           <div className="hidden md:flex gap-3 text-[18px] ">
             <NavButton />
           </div>

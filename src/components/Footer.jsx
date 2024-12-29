@@ -95,17 +95,7 @@ const Footer = () => {
               className="flex  flex-col"
             >
               {/* logo */}
-              <div className="flex items-center gap-2">
-                <div className="w-7 relative h-7  rounded-[6px] justify-center bg-white">
-                  <div className="flex gap-2">
-                    <span className="top-2 left-1 absolute h-[6px] w-[6px] rounded-full bg-black"></span>
-                    <span className="top-2 left-[17px] absolute h-[6px] w-[6px] rounded-full bg-black"></span>
-                  </div>
-                </div>
-                <div className="text-[25px] text-white font-extrabold">
-                  DotPe
-                </div>
-              </div>
+             <img className="w-[120px] mb-2" src="https://cdn.dotpe.in/dotpe-website-live/images/dotpe-white-logo-svg.svg" alt="logo"/>
 
               <span className="text-[#999696ea]">
                 @ DotPe, All rights reserved

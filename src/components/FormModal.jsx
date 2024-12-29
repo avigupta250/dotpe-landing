@@ -61,17 +61,8 @@ export const FormModal = ({ open, setOpenModal }) => {
                   </motion.h2>
                 </div>
 
-                <div className="flex items-center gap-2">
-                  <div className="w-9 relative h-9  rounded-[6px] justify-center bg-white">
-                    <div className="flex gap-2">
-                      <span className="top-[13px] left-[5px] absolute h-[7px] w-[7px] rounded-full bg-black"></span>
-                      <span className="top-[13px] left-[23px] absolute h-[7px] w-[7.5px] rounded-full bg-black"></span>
-                    </div>
-                  </div>
-                  <div className="text-[35px] text-white font-extrabold">
-                    DotPe
-                  </div>
-                </div>
+                <img className="w-[150px] mb-2" src="https://cdn.dotpe.in/dotpe-website-live/images/dotpe-white-logo-svg.svg" alt="logo"/>
+
               </div>
 
               {/* Right Section */}

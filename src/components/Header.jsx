@@ -62,7 +62,8 @@ function Header({setOpenModal}) {
         className="w-full hidden z-10 md:block fixed h-[74px] px-2 bg-white  justify-between items-center shadow-md"
       >
         <div className=" px-10 bg-white h-[74px]  flex justify-between items-center">
-          <Logo />
+          {/* <Logo /> */}
+          <img src="https://cdn.dotpe.in/dotpe-website-live/images/dotpe-black-logo-svg.svg" alt="logo"/>
           <div className="hidden md:flex gap-3 text-[18px] text-black">
             <NavButton />
           </div>
@@ -77,7 +78,8 @@ function Header({setOpenModal}) {
       {/* Mobile Navigation */}
       <motion.nav className="w-full z-10 fixed top-0 md:hidden flex flex-col bg-white ">
         <div className="flex w-full px-6 py-4 justify-between items-center">
-          <Logo />
+          {/* <Logo /> */}
+          <img src="https://cdn.dotpe.in/dotpe-website-live/images/dotpe-black-logo-svg.svg" alt="logo"/>
           <button
             onClick={() => setToggle((prev) => !prev)}
             className="text-[30px]"
