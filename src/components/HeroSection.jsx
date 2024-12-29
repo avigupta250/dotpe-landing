@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Logo, NavButton } from "../components/Header";
 
-const HeroSection = () => {
+const HeroSection = ({setOpenModal}) => {
   return (
     <section className="bg-[#201139] overflow-hidden ">
       <div>
@@ -33,7 +33,7 @@ const HeroSection = () => {
           </ul>
           </div>
 
-          <motion.button className="w-[160px] h-[60px]  text-white font-semibold mt-8 text-[20px] rounded-full bg-blue-600">Get Started</motion.button>
+          <motion.button onClick={()=>setOpenModal(true)} className="w-[160px] h-[60px]  text-white font-semibold mt-8 text-[20px] rounded-full bg-blue-600">Get Started</motion.button>
         </motion.div>
 
 

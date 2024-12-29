@@ -23,7 +23,7 @@ function App() {
       <FormModal open={openModal} setOpenModal={setOpenModal} />
       <div>
         <Header setOpenModal={setOpenModal} />
-        <HeroSection />
+        <HeroSection setOpenModal={setOpenModal} />
         <Services />
         <Ecosystem />
         <ParallaxGallery />
