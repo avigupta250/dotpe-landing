@@ -82,7 +82,7 @@ const Testimonial = () => {
     <div className="bg-black ">
       <div>
         {/* heading */}
-        <div className="text-white mb-20  text-[30px] text-center pt-20 md:text-[60px] font-bold">
+        <div className="text-white md:mb-20 mb-[50px]  text-[30px] text-center pt-10 md:pt-20 md:text-[60px] font-bold">
           <motion.h1
            initial={{opacity:0,y:-50}}
            whileInView={{opacity:1,y:0}}
@@ -108,7 +108,7 @@ const Testimonial = () => {
               type: "custom",
             }}
             modules={[Pagination, Navigation]}
-            className="mySwiper w-full overflow-hidden h-[570px] md:h-[400px]    flex justify-center items-center text-white"
+            className="mySwiper w-full overflow-hidden h-[470px] md:h-[400px]    flex justify-center items-center text-white"
           >
             {sliderItems.map((item, index) => (
               <SwiperSlide key={index} className="bg-white rounded-3xl md:min-w-[720px] text-black">
