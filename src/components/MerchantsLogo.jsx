@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-// Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -109,10 +109,7 @@ className="w-full px-6 mt-[40px] md:p-0"
               slidesPerView: 6,
               spaceBetween: 30,
             },
-            // 1024: { 
-            //   slidesPerView: 6,
-            //   spaceBetween: 50,
-            // },
+           
           }}
          centeredSlides={true}
         initialSlide={5}

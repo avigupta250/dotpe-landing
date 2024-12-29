@@ -1,10 +1,8 @@
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import {motion} from "motion/react"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoIosArrowBack ,IoIosArrowForward} from "react-icons/io";
 
-// Import Swiper styles
 import "swiper/css";
 
 
@@ -150,7 +148,7 @@ const Testimonial = () => {
           </Swiper>
         </div>
 
-        {/* button */}
+        {/* buttons next prev */}
         <motion.div className="flex  w gap-4 justify-center mt-10  pb-10">
           <motion.button
           initial={{opacity:0,x: -30}}

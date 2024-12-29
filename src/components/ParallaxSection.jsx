@@ -61,6 +61,7 @@ const ParallaxGallery = () => {
           className={` absolute  transition-transform duration-150 items-center text-center top-[340px] left-[660px] z-1 text-black text-[16px] leading-[19px] font-bold`}
           >DotPe works for all types,<br/>size and formats of<br/> businesses</motion.div>
          
+         
         </div>
         <div  className="w-full md:hidden  h-full transition-transform duration-75"
           style={{

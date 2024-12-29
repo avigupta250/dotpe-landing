@@ -9,7 +9,6 @@ const RequestSection = ({ setOpenModal }) => {
     formState: { errors },
   } = useForm();
 
-  // const [openModal, setOpenModal] = useState(false);
 
   const onSubmit = (data) => {
     setOpenModal(true);

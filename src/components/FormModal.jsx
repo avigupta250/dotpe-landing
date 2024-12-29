@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react"; // Corrected import
+import { motion, AnimatePresence } from "motion/react";
 import { useForm } from "react-hook-form";
 import { Logo } from "./Header";
 import { RxCross2 } from "react-icons/rx";
@@ -15,7 +15,7 @@ export const FormModal = ({ open, setOpenModal }) => {
     console.log("Form Data:", data);
     window.alert("Form Submitted ")
     setOpenModal(false)
-    // Perform further actions like API calls here
+   
   };
 
   return (
@@ -87,7 +87,7 @@ export const FormModal = ({ open, setOpenModal }) => {
                   onSubmit={handleSubmit(onSubmit)}
                   className="flex flex-col space-y-4 w-full"
                 >
-                  {/* Name Input */}
+                
                   <div className="flex flex-col w-full">
                     
                     <input
@@ -103,7 +103,6 @@ export const FormModal = ({ open, setOpenModal }) => {
                     )}
                   </div>
 
-                  {/* Mobile Number Input */}
                   <div className="flex flex-col w-full">
                    
                     <div className="flex items-center ">
@@ -153,7 +152,7 @@ export const FormModal = ({ open, setOpenModal }) => {
                     )}
                   </div>
 
-                  {/* Consent */}
+              
                   <div className="text-[15px] text-gray-900 ">
                     By clicking On Continue I hereby provide my consent to
                     receive emails, phone calls, messages and other

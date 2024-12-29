@@ -30,6 +30,7 @@ const Footer = () => {
   return (
     <section className="w-full bg-black mt-[100px] ">
       <div className=" text-white  ">
+        
         {/* desktop view */}
         <div className="hidden md:block">
           <div className="  grid grid-cols-2 w-3/4 mx-auto py-14  gap-24">

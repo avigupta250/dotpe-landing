@@ -45,7 +45,7 @@ const Ecosystem = () => {
   const servicesMob = {
     "Food & Beverages": [
       {
-        // title: "Food & Beverage Industry",
+        
         id:1,
         desc: "Tools that connect the front of house with the back of house and integrate everything that you need to turn your restaurant into one dashboard",
         images: {
@@ -62,8 +62,7 @@ const Ecosystem = () => {
     ],
     Retail: [
       {
-        // title: "Food & Beverage Industry",
-        // title: "Retail",
+        
         id:2,
         desc: "Solutions to help you sell online and offline seamlessly.",
         images: {
@@ -78,7 +77,7 @@ const Ecosystem = () => {
     ],
     "Services & Others": [
       {
-        // title: "Services",
+        
         id:3,
         desc: "Efficient tools for health, repair, and other service professionals.",
         images: {

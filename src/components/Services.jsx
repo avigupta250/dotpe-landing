@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "motion/react";
 
 const Services = () => {
+
+  
   const cardData = [
     {
       title: "POS",

@@ -16,6 +16,7 @@ const HeroSection = ({setOpenModal}) => {
           </button>
         </div>
 
+
         {/* hero */}
         <motion.div className="flex mt-[30px] md:mt-[66px]  flex-col justify-center items-center">
           <h1 className="text-[45px] font-gilroy font-bold leading-[50px] md:text-[95px] mb-[16px] text-white text-center md:leading-[98px] flex justify-center md:font-bold">
