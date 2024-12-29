@@ -39,7 +39,7 @@ console.log(roundedScroll)
     // 322072
   );
   return (
-    <div className=" h-[330px]  overflow-hidden md:h-screen flex justify-center items-center text-center bg-blac  w-full">
+    <div className="  overflow-hidden  flex justify-center items-center text-center py-[100px] md:py-[200px]   w-full">
       <div className="flex justify-center itms-center  flex-col ">
         <motion.span
           style={{ color: textColor }}
