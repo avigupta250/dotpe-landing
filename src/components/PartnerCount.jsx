@@ -20,7 +20,7 @@ console.log(roundedScroll)
   const colors1=[
     "#00008B",
     "#190077",
-    "#190077",
+    // "#190077",
     "#4E155A",
     "#4E155A",
     // "#4E155A",
@@ -28,6 +28,7 @@ console.log(roundedScroll)
     // "#5E0E4D", 
   
     
+    "#CD151F",
     "#CD151F",
     "#CD151F",
     "#CD151F",
