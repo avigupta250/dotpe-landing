@@ -83,7 +83,7 @@ const MerchantsLogo = () => {
     },
   ];
   return (
-    <section className="w-full overflow-hidden md:h-screen    bg-white">
+    <section className="w-full overflow-hidden md:mb-[200px] mb-[50px]    bg-white">
       <div className="flex w-full gap-10 flex-col  justify-center items-center">
         <motion.h1
         className="text-[30px] mt-[80px] md:mt-[150px] px-10 leading-[35px] md:text-[50px] md:px-[300px] md:leading-[65px] text-center font-bold"
@@ -106,13 +106,13 @@ className="w-full px-6 mt-[40px] md:p-0"
               spaceBetween: 20,
             },
             768: { 
-              slidesPerView: 4,
+              slidesPerView: 6,
               spaceBetween: 30,
             },
-            1024: { 
-              slidesPerView: 6,
-              spaceBetween: 50,
-            },
+            // 1024: { 
+            //   slidesPerView: 6,
+            //   spaceBetween: 50,
+            // },
           }}
          centeredSlides={true}
         initialSlide={5}
