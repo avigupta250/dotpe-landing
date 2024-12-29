@@ -23,12 +23,12 @@ console.log(roundedScroll)
     "#190077",
     "#4E155A",
     "#4E155A",
-    "#4E155A",
+    // "#4E155A",
    
     // "#5E0E4D", 
   
     
-    // "#CD151F",
+    "#CD151F",
     "#CD151F",
     "#CD151F",
     "#CD151F",
