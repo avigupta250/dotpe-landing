@@ -14,16 +14,17 @@ console.log(roundedScroll)
     return () => unsubscribe(); 
   }, [scrollYProgress]);
 
-  const range1= [0.76,0.80,0.84,0.88,0.92,0.96]
+  const range1= [0.70, 0.71,0.72,0.74,0.75,0.76,0.77,0.78,0.79,0.80]
   const range2= [0.65,0.68,0.70,0.73,0.76,0.79,0.82]
 
   const colors1=[
-    // "#00008B",
+    "#00008B",
     "#190077",
     "#4E155A",
     "#4E155A",
-    // "#96082D",
-    
+    "#5E0E4D", 
+    "#96082D",
+    "#96082D",
     "#CD151F",
     "#CD151F",
     "#CD151F",   
