@@ -79,7 +79,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="bg-black  min-h-screen">
+    <div className="bg-black ">
       <div>
         {/* heading */}
         <div className="text-white mb-20  text-[30px] text-center pt-20 md:text-[60px] font-bold">
