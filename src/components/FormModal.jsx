@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useForm } from "react-hook-form";
-import { Logo } from "./Header";
 import { RxCross2 } from "react-icons/rx";
 
 export const FormModal = ({ open, setOpenModal }) => {
@@ -43,6 +41,7 @@ export const FormModal = ({ open, setOpenModal }) => {
               >
                 <RxCross2 />
               </button>
+
               <button
                 onClick={() => setOpenModal(false)}
                 className="absolute hidden rounded-full p-2  md:block text-[25px] bg-[#565656]  text-white top-0 right-0 -mr-12 mt-"
